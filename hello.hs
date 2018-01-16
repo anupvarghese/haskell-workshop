@@ -88,3 +88,16 @@ instance Eek Shape where
 --     In the expression: Circle 99 === Circle 99
 --     In an equation for `it': it = Circle 99 === Circle 99
 -- *Main>
+
+-- A function to compute perimeter of shape
+
+perimeter :: Shape -> Integer
+-- Another form of pattern matching
+perimeter (Circle r) = r * 2 * pie
+perimeter (Rectangle w h) = (w + h) * 2
+perimeter (Triangle a b c) = a + b + c
+
+-- *Main> perimeter (Circle 9)
+-- 54
+-- *Main> perimeter (Triangle 9 10 20)
+-- 39
