@@ -95,7 +95,7 @@ perimeter :: Shape -> Integer
 -- Another form of pattern matching
 perimeter (Circle r) = r * 2 * pie
 perimeter (Rectangle w h) = (w + h) * 2
-perimeter (Triangle a b c) = a + b + c
+perimeter (Triangle a b c) = let x = a + b in x + x
 
 -- *Main> perimeter (Circle 9)
 -- 54
