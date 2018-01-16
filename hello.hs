@@ -101,3 +101,14 @@ perimeter (Triangle a b c) = x + x where x = a + b
 -- 54
 -- *Main> perimeter (Triangle 9 10 20)
 -- 39
+
+
+data Two a = Two a a
+  deriving (Eq, Show)
+
+addTwo :: Two Integer -> Integer
+-- Constructor anything with () on left side is pattern matching
+-- on right side is constructor impl
+-- addTwo (Two x y) = x + y
+addTwo = \t -> case t of
+                Two x y -> x + y
