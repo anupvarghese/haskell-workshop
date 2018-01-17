@@ -112,3 +112,32 @@ addTwo :: Two Integer -> Integer
 -- addTwo (Two x y) = x + y
 addTwo = \t -> case t of
                 Two x y -> x + y
+
+
+-- FoldRight and FoldLeft
+
+-- foldLeft :: (b -> a -> b) -> b -> List a -> b
+                -- f         z     list
+-- algortithm in procedural way
+
+-- var r: b =  z
+
+-- for (el: list) {
+--   r = f(r, el)
+-- }
+
+-- return r
+
+-- to reverse using foldLeft f will be `flipLeft`
+
+-- foldRight :: (a -> b -> b) -> b -> List a -> b1
+--              f             z       list
+-- example
+-- list = a :. b :. c :. Nil
+
+-- foldRight f z list = a `f` (b `f` (c `f` z))
+
+-- listOfLists = list1 :. list2 :. list3 :. Nil
+--               list1 ++ list2 ++ list3 ++ Nil
+
+-- flatten listOfLists = foldRight (++) Nil listOfLists
