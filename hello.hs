@@ -141,3 +141,6 @@ addTwo = \t -> case t of
 --               list1 ++ list2 ++ list3 ++ Nil
 
 -- flatten listOfLists = foldRight (++) Nil listOfLists
+
+
+--
